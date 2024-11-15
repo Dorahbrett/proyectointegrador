@@ -38,11 +38,6 @@
 }
 
 
-.contenedorimg{
-    overflow: hidden;
-    display: flex;
-
-}
 .img {
     width: 50%;
     height: auto;
@@ -129,3 +124,24 @@ textarea {
   .checked{
     color: rgba(203, 203, 7, 0.886);
   }
+
+  .cajabanner{
+    background-color: rgb(83, 158, 204);
+  }
+  .banner{
+        width: 100%;
+        height: 35px;
+        margin: 0;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        position: relative;
+        animation: movimiento 20s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+  }
+  @keyframes movimiento {
+    from {left: 0px;}
+    to {left: 100%;}
+  }
+  #divanimado {animation-timing-function: linear;}
