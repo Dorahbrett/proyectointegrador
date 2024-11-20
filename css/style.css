@@ -1,74 +1,99 @@
-
 *{
-    box-sizing: border-box;
-    /*border: 1px yellow solid;*/
+margin: 5px;
+padding: 10px;
+/*border: 1px solid;
+box-sizing: border-box;*/
 }
 
-.header {
- padding-left: 0;
- margin-left: 0;
-}
-
-.menubar {
-    /*display: flex;*/
-    justify-content: flex-end; 
-    background-color:#26384a;
-}
-
-.menubar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-   /* display: flex;*/
-    font-family: "Pacifico", cursive;
+.oleo-script-swash-caps-regular {
+    font-family: "Oleo Script Swash Caps", system-ui;
     font-weight: 400;
     font-style: normal;
+  }
+
+.gridcontainer{
+    height: 150px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
 }
-
-.manubar ul li {
-    margin-left: 15px;
-}
-
-
-.menubar ul li a {
+header{
+    grid-area: header;
+    background-color: white;
     color: white;
-    text-decoration: none;
-    padding: 10px 15px;
- /*   display: block;*/
-}
-
-
-.img {
-    width: 50%;
-    height: auto;
-}
-
-.contenedorfoot{
-    background-color: #608ec2;
-    margin: auto;
-}
-.itemsfooter{
-    color: white;
-    text-decoration: none;
-    overflow: hidden;
-    padding: 10px;
-    display: block;
-    font-family: "pacifico";
-}
-.contenedor2foot{
-    background-color: #26384a;
-    color: white;
-    border: 1px solid;
     text-align: center;
-    
-    
+
+    }
+nav{
+    grid-area: nav;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+nav ul li {
+margin: 0.15px ;
+font-family: "Oleo Script Swash Caps", system-ui;
+
+}
+nav ul li a{
+color: white;
+text-decoration: none;
+padding: 15px 20px;
 }
 
-.contenedor2foot ul li{
-    list-style-type: none;
-}
+.productosdestacados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid;
+    
+    }
+.producto{
+        background-color: darkgoldenrod;
+        color: white;
+        padding: 20px;
+        margin: 10px;
+        flex: 1 1 200px;
+        box-sizing: border-box;
+        justify-items: center;
+    }
 
-.flex-container{
+h1{
+    text-align: center;
+}  
+.button {
+    background-color: black; 
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  button a{
+    text-decoration: none;
+    color: white;
+
+  }
+
+  .flex-container{
     display: flex;
     
 }
@@ -78,6 +103,31 @@
     }
 }
 
+.gridreseñas{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+gap: 20px;
+padding: 10px;
+transform: translateY(-5px);
+border: 1px solid;
+box-shadow: inset;
+}
+
+.cardreseñas{
+    border: 1px groove;
+    background-color: beige;
+    border-radius: 2px;
+}
+
+.checked{
+    color: rgba(203, 203, 7, 0.886);}
+
+.gridcontacto{
+display: grid;
+grid-template-columns: auto auto;
+gap: 20px;
+border: 1px double;
+}
 .contenedorform{
     background-color: #f2f2f2;
     border-radius: 5px;
@@ -92,10 +142,6 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-section div h1{
-    text-align: center;
 }
 input[type=email], select {
     width: 100%;
@@ -114,34 +160,21 @@ textarea {
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    resize: none;
-  }
+    resize: none;}
 
-  section{
-    border: 1px #26384a solid;
-  }
+@media (max-width:768px) {
+    .gridcontacto{
+    grid-template-columns: 1fr;
+}}
 
-  .checked{
-    color: rgba(203, 203, 7, 0.886);
-  }
-
-  .cajabanner{
-    background-color: rgb(83, 158, 204);
-  }
-  .banner{
-        width: 100%;
-        height: 35px;
-        margin: 0;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
-        position: relative;
-        animation: movimiento 20s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
-  }
-  @keyframes movimiento {
-    from {left: 0px;}
-    to {left: 100%;}
-  }
-  #divanimado {animation-timing-function: linear;}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 10px;
+    background-color: rgb(212, 212, 154);
+}
+@media (max-width:768px) {
+    footer{
+    grid-template-columns: 1fr;
+}}
