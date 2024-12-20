@@ -11,23 +11,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="gridcontainer">
         <header>
             <img src="imagenes/ETIQUETA 1.png" width="200px" alt="logo">
         </header>
-        <nav id="#inicio">
-            <ul>
-                <li> <a href="#inicio">Inicio </a></li>
-                <li><a href="#productos">Productos </a></li>
-                <li><a href="#preguntas">Preguntas Frecuentes</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="#inicio">
+            <div class="container-fluid d-flex">
+             
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Resenas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                </ul>
+                </div>
+            
+              <button type="button" class="btn btn-default btn-sm text-white me-2">
+                    <span class="fas fa-shopping-cart"></span>
+                  </button>
+            </div>
+          </nav>
     
     
         <main>
@@ -90,69 +113,75 @@
                     </section>
             </section>
         
-            <section id="productos">                
-                <div class="container p-5 text-center" id="productos" >
+            <div id="productosContainer">                
+                <div class="container p-5 text-center"  >
                     <h1 class="display-1" >Nuestros productos</h1>
                 </div>
         
                 <div class="flex-container p-5">
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3" >
+                        <div class="card-body d-grid">
                             <h4 class="card-title">Tarta de Chocolate Supremo</h4>
-                            <p class="card-text"> Una irresistible combinación de bizcocho de chocolate oscuro y capas de ganache cremoso, decorada con virutas de chocolate y una suave cobertura de cacao. Perfecta para los amantes del chocolate.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Una irresistible combinación de bizcocho de chocolate oscuro y capas de ganache cremoso, decorada con virutas de chocolate y una suave cobertura de cacao. Perfecta para los amantes del chocolate.</p>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                             <img class="card-img-bottom" src="https://picsum.photos/100?random=1" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3">
+                        <div class="card-body d-grid">
                             <h4 class="card-title">Cheesecake Clásico de Frutos Rojos</h4>
                             <p class="card-text">Una base de galleta crujiente cubierta con una cremosa mezcla de queso y un topping de frutos rojos frescos. Un equilibrio perfecto entre dulzura y acidez.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=2" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3">
+                        <div class="card-body d-grid">
                             <h4 class="card-title">Cupcakes de Vainilla y Buttercream</h4>
                             <p class="card-text"> Pequeñas delicias de bizcocho esponjoso de vainilla, cubiertas con un suave remolino de buttercream. Disponibles en colores y decoraciones personalizadas.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=3" alt="Card image">
                     </div>
                 </div>
                 <div class="flex-container p-5">
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3">
+                        <div class="card-body d-grid">
                             <h4 class="card-title">Macarons Franceses Artesanales</h4>
                             <p class="card-text">Elegantes y coloridos macarons rellenos de ganache o cremas afrutadas. Disponibles en sabores como frambuesa, pistacho, chocolate y limón.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                             <img class="card-img-bottom" src="https://picsum.photos/100?random=4" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3">
+                        <div class="card-body d-grid">
                             <h4 class="card-title"> Tarta Red Velvet Elegancia</h4>
                             <p class="card-text">Capas de bizcocho rojo aterciopelado con un delicado toque de cacao, rellenas y cubiertas con un frosting de queso crema. Un clásico irresistible para cualquier ocasión.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=5" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill">
-                        <div class="card-body">
+                    <div class="card p-2 flex-fill mb-3">
+                        <div class="card-body d-grid">
                             <h4 class="card-title">Mini Tartaletas de Frutas Frescas</h4>
                             <p class="card-text">Pequeñas bases de masa quebrada rellenas de crema pastelera y decoradas con frutas frescas de temporada. Una explosión de frescura y sabor en cada bocado.</p>
-                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                            <p class="card-text">Precio:</p>
+                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=6" alt="Card image">
                     </div>
                 </div>
 
-            </section>
+            </div>
 
             <section id="resenas">
                 <div class="gridreseñas">
@@ -263,5 +292,7 @@
                 
          </footer>
     </div>
+
+    <script src="/js/funciones_del_index.js"></script>
 </body>
 </html>
