@@ -10,47 +10,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
-    <div class="gridcontainer">
-        <header>
+    <div>
+        <header id="inicio">
             <img src="imagenes/ETIQUETA 1.png" width="200px" alt="logo">
         </header>
+    
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="inicio">
 
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="#inicio">
             <div class="container-fluid d-flex">
-             
+
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse " id="collapsibleNavbar">
-                <ul class="navbar-nav me-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Preguntas Frecuentes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Resenas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                  </li>
-                </ul>
+
+                <div class="collapse navbar-collapse " id="collapsibleNavbar">
+
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resenas">Resenas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-            
-              <button type="button" class="btn btn-default btn-sm text-white me-2">
-                    <span class="fas fa-shopping-cart"></span>
-                  </button>
+                <div>
+                    <span id="carritoContador" class="cart-count text-white">0</span>
+                    <a href="/carrito.html">
+                    <span class="fas fa-shopping-cart text-white"></span>
+                    </a>
+                </div>
             </div>
-          </nav>
+        </nav>
     
     
         <main>
@@ -113,75 +119,74 @@
                     </section>
             </section>
         
-            <div id="productosContainer">                
-                <div class="container p-5 text-center"  >
-                    <h1 class="display-1" >Nuestros productos</h1>
-                </div>
-        
-                <div class="flex-container p-5">
-                    <div class="card p-2 flex-fill mb-3" >
+            <div>                
+            
+                <h1 class="display-1" id="productos">Nuestros productos</h1>
+            
+                <div class="row d-sm-flex flex-sm-row p-3 justify-content-around" id="productosContainer">
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title">Tarta de Chocolate Supremo</h4>
                             <p class="card-text">Una irresistible combinación de bizcocho de chocolate oscuro y capas de ganache cremoso, decorada con virutas de chocolate y una suave cobertura de cacao. Perfecta para los amantes del chocolate.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
-                            <img class="card-img-bottom" src="https://picsum.photos/100?random=1" alt="Card image">
+                        <img class="card-img-bottom" src="https://picsum.photos/100?random=1" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill mb-3">
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title">Cheesecake Clásico de Frutos Rojos</h4>
                             <p class="card-text">Una base de galleta crujiente cubierta con una cremosa mezcla de queso y un topping de frutos rojos frescos. Un equilibrio perfecto entre dulzura y acidez.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=2" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill mb-3">
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title">Cupcakes de Vainilla y Buttercream</h4>
                             <p class="card-text"> Pequeñas delicias de bizcocho esponjoso de vainilla, cubiertas con un suave remolino de buttercream. Disponibles en colores y decoraciones personalizadas.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=3" alt="Card image">
                     </div>
-                </div>
-                <div class="flex-container p-5">
-                    <div class="card p-2 flex-fill mb-3">
+           
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title">Macarons Franceses Artesanales</h4>
                             <p class="card-text">Elegantes y coloridos macarons rellenos de ganache o cremas afrutadas. Disponibles en sabores como frambuesa, pistacho, chocolate y limón.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
-                            <img class="card-img-bottom" src="https://picsum.photos/100?random=4" alt="Card image">
+                        <img class="card-img-bottom" src="https://picsum.photos/100?random=4" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill mb-3">
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title"> Tarta Red Velvet Elegancia</h4>
                             <p class="card-text">Capas de bizcocho rojo aterciopelado con un delicado toque de cacao, rellenas y cubiertas con un frosting de queso crema. Un clásico irresistible para cualquier ocasión.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=5" alt="Card image">
                     </div>
                 
-                    <div class="card p-2 flex-fill mb-3">
+                    <div class="col-sm-3 m-1 p-2 card p-2 flex-fill mb-3">
                         <div class="card-body d-grid">
                             <h4 class="card-title">Mini Tartaletas de Frutas Frescas</h4>
                             <p class="card-text">Pequeñas bases de masa quebrada rellenas de crema pastelera y decoradas con frutas frescas de temporada. Una explosión de frescura y sabor en cada bocado.</p>
                             <p class="card-text">Precio:</p>
-                            <button class="btn btn-primary btn-block">Agregar al carrito</button>
+                            <button id= "agregarAlCarrito" class="btn btn-dark btn-block">Agregar al carrito</button>
                         </div>
                         <img class="card-img-bottom" src="https://picsum.photos/100?random=6" alt="Card image">
                     </div>
                 </div>
 
             </div>
+
 
             <section id="resenas">
                 <div class="gridreseñas">
@@ -227,11 +232,11 @@
                     <h1>CONTACTO</h1>
                     <div class="gridcontacto">
                         <div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13133.525739207442!2d-58.372686506197674!3d-34.61979998903039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1730691227621!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13133.525739207442!2d-58.372686506197674!3d-34.61979998903039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1730691227621!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     
                         <div class="contenedorform">
-                            <form action="https://formspree.io/f/mvgorjve" method="post">
+                            <form id=formularioContacto action="https://formspree.io/f/mvgorjve" method="post">
                                 <label for="nombre">Nombre</label>
                                 <input type="text" id="nombre" name="nombre" placeholder="Escribe tu Nombre">
                                 <br>
@@ -243,7 +248,7 @@
                                 <br>
                                 <label for="mensaje">Mensaje</label>
                                 <textarea name="mensaje" id="mensaje"></textarea>
-                                <input type="submit" value="Submit">
+                                <input type="submit" value="Enviar">
                             </form>
                         </div>
                     </div>
@@ -289,10 +294,14 @@
                         </li>
                     </ul>
             </div>
-                
+            
+            <div class="footerUltimo">
+                <p>2024. Mi tienda de Pasteleria. Todos los derechos reservados.</p>
+            </div>
          </footer>
-    </div>
+    
 
     <script src="/js/funciones_del_index.js"></script>
+     
 </body>
 </html>

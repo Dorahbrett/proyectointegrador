@@ -11,17 +11,7 @@ box-sizing: border-box;*/
     font-style: normal;
   }
 
-.gridcontainer{
-    height: 150px;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "header"
-    "nav"
-    "main"
-    "footer";
-}
+
 header{
     grid-area: header;
     background-color: white;
@@ -53,6 +43,19 @@ text-decoration: none;
 padding: 15px 20px;
 }
 
+.contadorproductos
+    {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-size: 14px;
+    
+}
+
 .productosdestacados{
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +74,9 @@ padding: 15px 20px;
         justify-items: center;
     }
 
+    .col-sm-3.m-1.p-2.card.flex-fill.mb-3 {
+        background-color: rgb(212, 212, 154);
+    }
 h1{
     text-align: center;
 }  
@@ -167,14 +173,27 @@ textarea {
     grid-template-columns: 1fr;
 }}
 
-footer{
+footer {
     grid-area: footer;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     background-color: rgb(212, 212, 154);
+    text-align: center;
+    padding: 20px;
+}
+footer ul{
+    list-style: none
 }
 @media (max-width:768px) {
     footer{
     grid-template-columns: 1fr;
 }}
+
+.footerUltimo {
+    grid-column: 1 / -1;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #333;}
